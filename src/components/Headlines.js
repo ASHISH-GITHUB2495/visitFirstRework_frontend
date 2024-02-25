@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-const apiUrl = process.env.REACT_APP_nodeUrl;
+const apiUrl = 'https://visitfirst.onrender.com';
 
 console.log(`API Key: ${apiUrl}`);
 
@@ -14,7 +14,7 @@ function Headlines(){
   
     useEffect(() => {
       async function fetchData() {
-        const res = await fetch("/api1");
+        const res = await fetch(apiUrl+"/api1");
         res
           .json()
           .then((res) => {
@@ -26,7 +26,7 @@ function Headlines(){
           }
         });
 
-        const res2 = await fetch("/api2");
+        const res2 = await fetch(apiUrl+"/api2");
         res2
         .json()
         .then((res2) => {
